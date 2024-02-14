@@ -1,0 +1,8 @@
+{
+    "productos": [
+        {"id":1, "nombre": "WebCam 1", "descripcion": "WebCam Desc 1", "precio": 100, "imagen": ""},
+        {"id":1, "nombre": "WebCam 2", "descripcion": "WebCam Desc 2", "precio": 200, "imagen": ""},
+        {"id":1, "nombre": "WebCam 3", "descripcion": "WebCam Desc 3", "precio": 300, "imagen": ""}
+        
+    ]
+}
