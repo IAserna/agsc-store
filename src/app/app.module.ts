@@ -11,6 +11,7 @@ import { HeaderComponent } from './componentes/plantillas/header/header.componen
 import { FooterComponent } from './componentes/plantillas/footer/footer.component';
 import { ProductosModule } from './modulos/productos/productos.module';
 import { ProductosListaComponent } from './componentes/productos-lista/productos-lista.component';
+import { ProductosService } from './servicios/productos.service';
 
 
 @NgModule({
@@ -35,4 +36,9 @@ import { ProductosListaComponent } from './componentes/productos-lista/productos
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+  constructor(private service:ProductosService){
+    localStorage.setItem('cart', JSON.stringify([]))
+  }
+}

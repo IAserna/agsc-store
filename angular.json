@@ -57,7 +57,10 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "server": "scr/main.server.ts",
+            "prerender": false,
+            "ssr": false
           },
           "configurations": {
             "production": {
