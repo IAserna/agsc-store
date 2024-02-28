@@ -1,4 +1,4 @@
-<p-card header="{{producto?.nombre}}" >
+<p-card header="{{producto?.nombre | titlecase}}" >
     <ng-template pTemplate="header">
         <img alt="Card" *ngIf="producto?.imagen" [src]="producto?.imagen" class="imagen-card" />
     </ng-template>
@@ -12,7 +12,7 @@
    
     <span >{{producto?.precio | currency}}</span>
     <ng-template pTemplate="footer">
-        <p-button (Click)="add()" label="Agendar"  icon="pi pi-cart-plus"></p-button>
+        <p-button (onClick)="add()" label="Agendar"  icon="pi pi-cart-plus"></p-button>
     </ng-template>
   </p-card>
   

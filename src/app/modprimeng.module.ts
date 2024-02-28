@@ -6,6 +6,7 @@ import { SidebarModule } from 'primeng/sidebar';
 import { ToastModule } from 'primeng/toast';
 import { CalendarModule } from 'primeng/calendar';
 import { TagModule } from 'primeng/tag';
+import { DynamicDialogModule } from 'primeng/dynamicdialog';
 
 
 
@@ -15,7 +16,8 @@ const misModulos = [
   SidebarModule,
   ToastModule,
   CalendarModule,
-  TagModule
+  TagModule,
+  DynamicDialogModule
 ]
 
 @NgModule({

@@ -12,13 +12,15 @@ import { FooterComponent } from './componentes/plantillas/footer/footer.componen
 import { ProductosModule } from './modulos/productos/productos.module';
 import { ProductosListaComponent } from './componentes/productos-lista/productos-lista.component';
 import { ProductosService } from './servicios/productos.service';
+import { CartComponent } from './componentes/cart/cart.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

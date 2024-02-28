@@ -12,43 +12,50 @@ import { CartProducto } from '../../interfaces/cart-producto';
 export class ProductoComponent {
   @Input() producto?: Producto;
 
-
-
 cart: CartProducto[] = []
-
+ isEncontrado: boolean = false
   constructor() {
-    console.log();
-    
+    console.log(); 
   }
 
   get nombre() {
     return this.producto?.nombre
   }
 
-  add() {
-    this.cart = JSON.parse(localStorage.getItem('cart') as string)
+  add(): void {
+    this.cart = JSON.parse(localStorage.getItem("cart") as string)
+    console.log("agregando")
+  
  
     if (this.cart.length > 0 ) {
       this.cart.forEach(elem => {
         if (elem.id === this.producto?.id) {
           elem.cantidad += 1
+          this.isEncontrado = true
         }
       })
-
-
+     if(!this.isEncontrado) {
+      this.cart.push({id: this.producto?.id ,
+        nombre: this.producto?.nombre as string,
+        direccion: this.producto?.direccion as string,
+        telefono: this.producto?.telefono as string,
+        precio: this.producto?.precio as number,
+        imagen: this.producto?.imagen as string,
+        cantidad: 1
+    })
+     }
+     
     }else {
       this.cart.push({id: this.producto?.id ,
         nombre: this.producto?.nombre as string,
         direccion: this.producto?.direccion as string,
-        fechas: new Date(),
         telefono: this.producto?.telefono as string,
         precio: this.producto?.precio as number,
         imagen: this.producto?.imagen as string,
-       cantidad: 1
+        cantidad: 1
     })
-    
   }
-  }
-  
+  localStorage.setItem("cart",  JSON.stringify(this.cart));
+  }  
 }
 

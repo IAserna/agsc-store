@@ -3,7 +3,6 @@ export interface Producto {
     nombre:string;
     direccion: string;
     telefono: string;
-    fechas: DateConstructor;
     precio: number;
     imagen: string;	
     

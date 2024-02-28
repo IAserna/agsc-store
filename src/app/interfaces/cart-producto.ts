@@ -4,7 +4,6 @@ export interface CartProducto {
     nombre:string;
     direccion: string;
     telefono: string;
-    fechas: Date;
     precio: number;
     imagen: string;	
     cantidad: number;

@@ -13,7 +13,7 @@ html , body {
     min-height: 60px;
     background-color: rgb(255, 230, 250);
     text-align: left;
-    padding-top: 10px;
+    padding-top: 20px;
     padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;
@@ -52,10 +52,15 @@ div.cart {
     float: right;
     margin-right: 5px;
 }
-
+.carrito{
+  margin: 5px
+}
 .cart img {
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
+    margin-top: 5px;
+    margin-bottom: auto;
+    margin-right: 5px;
 }
 
 .cart span {
